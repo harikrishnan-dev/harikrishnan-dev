@@ -8,7 +8,6 @@ Data Engineer at **Kpler** (Singapore).
 - 💬 Ask me about: LangGraph, RAG, Airflow, Debezium / CDC, ArgoCD, Spark
 - 📫 Reach me: [https://www.linkedin.com/in/harikrishnan-rajkumar/] · [email]
 
-## 🛠️ Tech stack
 
 ## 🛠️ Tech stack
 
@@ -42,6 +41,39 @@ Data Engineer at **Kpler** (Singapore).
 
 
 ![Streak](https://streak-stats.demolab.com?user=harikrishnan-dev&hide_border=true)
+
+
+## 🚀 Featured projects
+
+### 🤖 [CORA](https://github.com/harikrishnan-dev/cora): Customer Operations & Resolution Agent
+Multi-agent customer support system for e-commerce. A triage agent reads the customer's
+message and routes it to specialist agents for **refunds, warranty/service and shipping**,
+resolving tickets end to end with minimal human intervention.
+- Multi-agent orchestration with **LangGraph** and **Claude**, traced in **LangSmith**
+- **FastAPI** backend + **Streamlit** chat UI, **PostgreSQL** for customers/orders
+- Dockerized and deployable to **Render**
+
+`LangGraph` `Anthropic Claude` `FastAPI` `Streamlit` `PostgreSQL` `Docker`
+
+### 🏦 [issue-classifier](https://github.com/harikrishnan-dev/issue-classifier): Secure support-ticket routing for a digital bank
+Takes free-text customer issues ("my card was declined", "block my lost card") and routes
+each one to the owning internal team, with guardrails built in.
+- **PII redaction** with Microsoft Presidio before any text reaches the LLM
+- **Prompt-injection screening**; fails safe to human review instead of guessing
+- Team taxonomy derived by clustering the 77 intents of the **banking77** dataset into 6 teams
+- Tested with pytest, pre-commit and CI
+
+`LangGraph` `Presidio` `LLM guardrails` `FastAPI` `pytest`
+
+### 📚 [newbie](https://github.com/harikrishnan-dev/newbie): Agentic RAG onboarding assistant
+A chatbot that helps new employees get answers from the company handbook
+(demoed on the public GitLab handbook).
+- **Hybrid search** (BM25 + vector) over a **Weaviate** vector store
+- CLI to backfill and query documents; graph debuggable in LangGraph Studio
+- **FastAPI** backend + **Streamlit** chat UI
+
+`LangGraph` `RAG` `Weaviate` `FastAPI` `Streamlit`
+
 <!--
 **harikrishnan-dev/harikrishnan-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
